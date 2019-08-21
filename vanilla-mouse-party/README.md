@@ -247,12 +247,12 @@ function draw() {
     const left = `left:${getRandomNumber(
       mousePosition.x - ballSize,
       mousePosition.x
-    )}px;`;
-    const top = `top:${getRandomNumber(
-      mousePosition.y - ballSize,
-      mousePosition.y
-    )}px;`;
-    const style = `${left}${top}${color}${size}`;
+     )}px;`;
+      const top = `top:${getRandomNumber(
+         mousePosition.y - ballSize,
+         mousePosition.y
+       )}px;`;
+      const style = `${left}${top}${color}${size}`;
 
     const ball = document.createElement('div');
     ball.classList.add('ball');
@@ -265,9 +265,11 @@ function draw() {
     container.appendChild(ball);
   }, 50);
 }
+
 window.addEventListener('mouseover', function() {
   drawId = draw();
 });
+
 window.addEventListener('mouseout', function() {
   clearInterval(drawId);
 });
