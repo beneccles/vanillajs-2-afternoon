@@ -8,7 +8,14 @@ fetch('https://www.swapi.co/api/people')
         characters.push(...response.results);
     })
 
+function appearList () {
+      list.style.visibility = "visible";
+}
+
 function filterText () {
+
+    appearList();
+
     // Convert all characters to lower case, and map into li tags.
     const filtered = characters.filter(i => i.name.toLowerCase().includes
     (this.value.toLowerCase()))
@@ -26,3 +33,6 @@ function render (arr) {
 
 
 search.addEventListener('keyup', filterText);
+
+
+
